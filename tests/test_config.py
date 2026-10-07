@@ -12,7 +12,7 @@ class TestConfiguration(unittest.TestCase):
 
     def test_timeout_has_safe_default(self):
         with patch.dict(os.environ, {}, clear=True):
-            self.assertEqual(get_request_timeout(), 5)
+            self.assertEqual(get_request_timeout(), 8)
 
     def test_invalid_timeout_is_rejected(self):
         with patch.dict(os.environ, {"REQUEST_TIMEOUT": "fast"}, clear=False):
